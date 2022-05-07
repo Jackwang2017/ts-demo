@@ -7,13 +7,39 @@ module.exports = {
   entry: "./src/index.ts",
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    environment: {
+      arrowFunction: false
+    }
   },
   module: {
     rules: [
       {
         test: /\.ts$/,
-        use: 'ts-loader',
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                [
+                  "@babel/preset-env",
+                  {
+                    // 要兼容的目标浏览器
+                    targets: {
+                      "chrome": "58",
+                      "ie": "11"
+                    },
+                    // 指定corejs的版本
+                    "corejs": "3",
+                    // 使用corejs的方式
+                    "useBuiltIns": "usage"
+                  }
+                ]
+              ]
+            }
+          },
+          'ts-loader'
+        ],
         exclude: /node_modules/
       }
     ]
