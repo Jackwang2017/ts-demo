@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
-    "module": "ES2015",
+    "module": "commonjs",
     "target": "ES2015",
-    "strict": true
+    "lib": ["ES6"],
+    "noImplicitAny": false
   },
   // "include": [
   //   "./src/**/*"
