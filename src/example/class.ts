@@ -95,26 +95,94 @@
 // console.log(p.age)
 // console.log(Parent.getAge())
 
-class Info {
-  public name: string
-  public age?: number
-  private _infostr: string
-  constructor(name: string, age?: number, public sex?: string) {
-    this.name = name;
-    this.age = age;
-    // this.sex = sex;
-  }
-  get infoStr() {
-    return `${this.name}: ${this.age}`
-  }
-  set infoStr(value) {
-    console.log(`setter: ${value}`)
-    this._infostr = value;
+// class Info {
+//   public name: string
+//   public age?: number
+//   private _infostr: string
+//   constructor(name: string, age?: number, public sex?: string) {
+//     this.name = name;
+//     this.age = age;
+//     // this.sex = sex;
+//   }
+//   get infoStr() {
+//     return `${this.name}: ${this.age}`
+//   }
+//   set infoStr(value) {
+//     console.log(`setter: ${value}`)
+//     this._infostr = value;
+//   }
+// }
+// const info1 = new Info('lisa');
+// const info3 = new Info('lisa', 18);
+// const info4 = new Info('lisa', 18, 'femal');
+// console.log(info4)
+// info4.infoStr = 'hello world'
+// console.log(info4.infoStr)
+
+// abstract class People {
+//   constructor(public name: string) {}
+//   public abstract printName(): void;
+// }
+// class Man extends People {
+//   constructor(name: string) {
+//     super(name)
+//     this.name = name;
+//   }
+//   public printName(): void {
+//       console.log(this.name)
+//   }
+// }
+// const m = new Man('liso');
+// m.printName();
+
+// abstract class People {
+//   abstract name: string;
+//   abstract get insideName(): string;
+//   abstract set insideName(value: string);
+// }
+// class P extends People {
+//   public name: string;
+//   public insideName: string;
+// }
+
+class People {
+  constructor(public name: string){}
+}
+let p2: People = new People('lisa')
+class Animal {
+  constructor(public name: string){}
+}
+p2 = new Animal('heimao')
+
+// 接口与类的关系
+interface FoodInterface {
+  type: string;
+}
+// 类实现接口
+class FoodClass implements FoodInterface {
+  public type: string;
+}
+// 接口继承类，只继承类的成员和实现类的方式
+class A {
+  protected name: string;
+}
+interface I extends A {
+  
+}
+class B extends A implements I {
+  public name: string;
+}
+
+// 在泛型中实现类类型
+const create = <T>(c: new() => T): T => {
+  return new c()
+}
+class Infos {
+  public age: number
+  constructor() {
+    this.age = 18
   }
 }
-const info1 = new Info('lisa');
-const info3 = new Info('lisa', 18);
-const info4 = new Info('lisa', 18, 'femal');
-console.log(info4)
-info4.infoStr = 'hello world'
-console.log(info4.infoStr)
+
+console.log(create<Infos>(Infos).age)
+// console.log(create<Infos>(Infos).name)
