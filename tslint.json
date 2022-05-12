@@ -11,7 +11,11 @@
         "object-literal-sort-keys": [false],
         "max-classes-per-file": [false],
         "no-empty": [false],
-        "variable-name": [false]
+        "variable-name": [false],
+        "no-angle-bracket-type-assertion": [true],
+        "interface-over-type-literal": [false],
+        "no-shadowed-variable": [false],
+        "forin": [false]
     },
     "rulesDirectory": []
 }

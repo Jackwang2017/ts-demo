@@ -3,7 +3,8 @@
     "module": "commonjs",
     "target": "ES2015",
     "lib": ["ES6", "DOM"],
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    // "strictNullChecks": true
   },
   // "include": [
   //   "./src/**/*"
