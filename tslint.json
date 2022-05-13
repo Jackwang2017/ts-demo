@@ -15,7 +15,12 @@
         "no-angle-bracket-type-assertion": [true],
         "interface-over-type-literal": [false],
         "no-shadowed-variable": [false],
-        "forin": [false]
+        "forin": [false],
+        "ban-types": [false],
+        "array-type": [false],
+        "no-namespace": [false],
+        "no-reference": [false]
+        
     },
     "rulesDirectory": []
 }

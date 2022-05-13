@@ -6,4 +6,9 @@
 // import './example/enum';
 // import './example/inference-compatibility';
 // import './example/seniorType1';
-import './example/seniorType2';
+// import './example/seniorType2';
+// import './ts-modules/index'
+// import './ts-modules/merging'
+// import './ts-modules/decorator'
+// import './ts-modules/mixin'
+import './ts-modules/update'
