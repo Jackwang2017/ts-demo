@@ -11,4 +11,6 @@
 // import './ts-modules/merging'
 // import './ts-modules/decorator'
 // import './ts-modules/mixin'
-import './ts-modules/update'
+// import './ts-modules/update'
+// import './example/declaration-files'
+import './ts-modules/project-declaration'

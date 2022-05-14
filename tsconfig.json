@@ -6,9 +6,14 @@
     "noImplicitAny": false,
     // "strictNullChecks": true
     "experimentalDecorators": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./node_modules/@types", "./typings/*"]
+    }
   },
-  // "include": [
-  //   "./src/**/*"
-  // ],
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.d.ts", "src/ts-modules/add-methods-to-string.js",
+  ],
 }

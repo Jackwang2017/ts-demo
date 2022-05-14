@@ -1,6 +1,7 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -49,6 +50,10 @@ module.exports = {
     new HTMLWebpackPlugin({
       template: './src/index.html'
     }),
+    // new CopyWebpackPlugin([{
+    //   from: path.join(__dirname, './src/ts-modules/handleTitle.js'),
+    //   to: path.resolve(__dirname, './dist'),
+    // }])
   ],
   resolve: {
     extensions: ['.ts', '.js']

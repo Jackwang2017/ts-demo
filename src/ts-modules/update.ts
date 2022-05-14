@@ -87,13 +87,13 @@ async function getRoleReq(user_id: number) {
 
 // tsconfig.json可以有注释
 // 动态导入，import()返回一个Promise
-async function getTime(format: string) {
-  const moment = await import('moment');
-  return moment.default().format(format)
-}
-getTime('L').then(res => {
-  console.log(res)
-})
+// async function getTime(format: string) {
+//   const moment = await import('moment');
+//   return moment.default().format(format)
+// }
+// getTime('L').then(res => {
+//   console.log(res)
+// })
 // 弱类型探测
 interface ObjIn {
   name?: string
